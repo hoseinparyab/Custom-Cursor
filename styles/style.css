@@ -1,0 +1,56 @@
+@font-face {
+    font-family: vazirNormal;
+    src: url("../fonts/vazir.eot");
+    src: url("../fonts/vazir.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/vazir.woff2") format("woff2"),
+        url("../fonts/vazir.woff") format("woff"),
+        url("../fonts/vazir.ttf") format("truetype");
+    font-weight: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: rtl;
+    font-family: vazirNormal !important;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #00B8D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+h2 {
+    color: #fff;
+    font-size: 240px;
+    font-weight: 200;
+    text-transform: capitalize;
+    line-height: 1;
+    cursor: default;
+    font-family: vazirNormal;
+}
+
+.Cursor {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    transition: all 0.1s ease-out;
+    pointer-events: none;
+}
+h2:hover+.Cursor{
+    transform: scale(15);
+}
